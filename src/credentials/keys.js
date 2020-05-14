@@ -1,0 +1,2 @@
+export const DEV_JWT =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTg5MjU4MTc2fQ.xzq0VQImtxoK-XTjAdWPHfK5OBGl0OQvHmMx8z8aEsU";

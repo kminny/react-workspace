@@ -8,14 +8,15 @@ import { withClientState } from "apollo-link-state";
 import { WebSocketLink } from "apollo-link-ws";
 import { getMainDefinition } from "apollo-utilities";
 
+import { DEV_JWT } from "./credentials/keys";
+
 /** checked */
 const cache = new InMemoryCache();
 
 /** checked */
 const getToken = (tokenName) => {
   // const token =  localStorage.getItem(tokenName);
-  const token =
-    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNTg5MjU4MTc2fQ.xzq0VQImtxoK-XTjAdWPHfK5OBGl0OQvHmMx8z8aEsU";
+  const token = DEV_JWT;
 
   if (token) {
     return token;
