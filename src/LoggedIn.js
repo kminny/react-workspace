@@ -7,7 +7,7 @@ import "./App.css";
 
 import { ME, LOG_IN, LOG_OUT, IS_LOGGED_IN } from "./sharedQueries";
 
-const App = (props) => {
+const LoggedIn = (props) => {
   const isLoggedIn = props.data.auth.isLoggedIn;
   const { loading: meLoading, data: meData, error: meError } = useQuery(ME);
   const [logUserIn, { data: logInData }] = useMutation(LOG_IN);
@@ -52,10 +52,10 @@ const App = (props) => {
           Learn React
         </a>
         <button onClick={logUserInFunc}>LogIn</button>
-        {isLoggedIn && <button onClick={logUserOutFunc}>LogOut</button>}
+        {/* {isLoggedIn && <button onClick={logUserOutFunc}>LogOut</button>} */}
       </header>
     </div>
   );
 };
 
-export default graphql(IS_LOGGED_IN)(App);
+export default graphql(IS_LOGGED_IN)(LoggedIn);
